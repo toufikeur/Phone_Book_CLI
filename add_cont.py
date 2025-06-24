@@ -10,8 +10,8 @@ def add_contact(contacts):
         print("Error: The contact’s name must be a non-numeric string.")
         return
     phone = input("Enter Phone Number: ")
-    if not phone.isdigit():
-        print("Error: The phone number must be an integer.")
+    if not phone.isdigit() or len(phone)!=11 :
+        print("Error: The phone number must be an integer and 11 digit.")
         return
     email = input("Enter Email: ")
     if '@' not in email or '.' not in email:
